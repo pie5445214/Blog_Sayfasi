@@ -223,21 +223,8 @@
 
         function setupRealtimeListener() {
             if (!db) {
-                // Fallback veriler eğer firebase aktif değilse
-                posts = [
-                    {
-                        id: 'demo-1',
-                        author: 'Zeynep Demir',
-                        title: 'Sabit Kahve Molalarının Üretkenliğe Etkisi',
-                        category: 'Yasam',
-                        content: 'Gün içinde kendimize ayırdığımız o küçük 15 dakikalık kahve molaları, aslında zihnimizin yeniden şarj olmasını sağlayan en önemli anlardır.',
-                        date: '6 Mart 2026',
-                        likes: 12,
-                        comments: [],
-                        bgClass: 'bg-pastelPink/20',
-                        createdAt: Date.now()
-                    }
-                ];
+                // Fallback veriler eğer firebase aktif değilse boş başlatıyoruz
+                posts = [];
                 document.getElementById('loading-state').classList.add('hidden');
                 renderPosts();
                 return;
